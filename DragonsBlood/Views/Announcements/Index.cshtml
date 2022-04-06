@@ -1,0 +1,30 @@
+﻿@model IEnumerable<DragonsBlood.Models.Announcements.Announcement>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-sections">
+    <div class="content-sections-heading">Announcements</div>
+    <div class="content-sections-body">
+        <p>
+            @Html.ActionLink("Create New", "Create", null, new { @class="btn btn-default" })
+        </p>
+
+        @foreach (var item in Model)
+        {
+            <div class="content-sections">
+                <div class="content-sections-heading">@item.Subject <span style="float: right; color: white; font-size: 14px;">@item.Type | @item.Stamp</span></div>
+                <div class="content-sections-body">
+                    @Html.Raw(item.Body)
+                </div>
+                <div class="content-sections-footer btn-group">
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-default" })
+                    @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-default" })
+                </div>
+            </div>
+        }
+
+    </div>
+</div>

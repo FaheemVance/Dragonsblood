@@ -1,0 +1,21 @@
+﻿@model IEnumerable<DragonsBlood.Models.AlertModels.Alert>
+@if (User.Identity.IsAuthenticated && Model.Any())
+{
+    <div class="banner-section">
+        <a href="/Home/Alerts"><h4>Alerts</h4></a>
+        <div class="banner-content">
+            <ul id="Alerts">
+                @foreach (var alert in Model)
+                {
+                    <a href="/Home/Alerts">
+                        <li class="@alert.ShortKingdom">
+
+                            @alert.Attacker <br />
+                            @alert.Coordinates.X : @alert.Coordinates.Y <br />
+                        </li>
+                    </a>
+                }
+            </ul>
+        </div>
+    </div>
+}

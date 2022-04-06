@@ -1,0 +1,121 @@
+﻿@model DragonsBlood.Models.ChatModels.ChatIndexModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-sections">
+    <div class="content-sections-heading">Chat Management</div>
+    <div class="content-sections-body">
+
+        <div class="content-sections">
+            <div class="content-sections-heading">Chat Rooms</div>
+            <div class="content-sections-body">
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Rooms.First().Name)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model.Rooms)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @if (!item.IsDefault)
+                                {
+                                    <span>@Html.ActionLink("Edit", "EditRoom", new { id = item.Id }) | </span>
+                                    <span>@Html.ActionLink("Delete", "DeleteRoom", new { id = item.Id })</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+
+        <div class="content-sections">
+            <div class="content-sections-heading">Chat Room Permissions</div>
+            <div class="content-sections-body">
+                <p>
+                    @Html.ActionLink("Create New", "CreateRoomPermission")
+                </p>
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.RoomPermissions.First().Room.Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.RoomPermissions.First().Role.Name)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model.RoomPermissions)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Room.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Role.Name)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Delete", "DeleteRoomPermission", new { id = item.Id })
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+
+        <div class="content-sections">
+            <div class="content-sections-heading">Chat User Groups</div>
+            <div class="content-sections-body">
+                <p>
+                    @Html.ActionLink("Create New", "Create")
+                </p>
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Roles.First().Name)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Roles.First().Description)
+                        </th>
+                        <th></th>
+                    </tr>
+
+                    @foreach (var item in Model.Roles)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Name)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Description)
+                            </td>
+
+                            <td>
+                                @if (!item.IsDefault)
+                                {
+                                    <span>@Html.ActionLink("Edit", "EditUserGroup", new {id = item.Id}) | </span>
+                                    <span>@Html.ActionLink("Delete", "DeleteUserGroup", new { id = item.Id })</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>

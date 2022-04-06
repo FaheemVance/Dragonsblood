@@ -1,0 +1,91 @@
+﻿@model bool
+
+@using DragonsBlood.Data.Extensions
+
+<audio controls class="hidden" id="Ping">
+    <source src="~/Sounds/ping.mp3" type="audio/mpeg">
+</audio>
+<audio controls class="hidden" id="Pulse">
+    <source src="~/Sounds/pulse.mp3" type="audio/mpeg">
+</audio>
+@{
+    var pingEnabled = Context.User.EnableChatPing();
+    var audioMuteSpan = "<span id=\"PingOn\" class=\"glyphicon glyphicon-volume-off volume\"></span>";
+
+    if (pingEnabled)
+    {
+        audioMuteSpan = "<span id=\"PingOff\" class=\"glyphicon glyphicon-volume-up volume\"></span>";
+    }
+}
+
+@if (Model)
+{
+    <div id="ChatBoxMin" class="content-sections">
+        <div class="content-sections-heading"><a href="@Url.Action("Chat", "Home")">Chat</a><span id="minimiseChat" class="glyphicon glyphicon-chevron-up nest-right"></span></div>
+        <div id="ChatContainer">
+            @Html.Raw(audioMuteSpan)
+            <ul id="ActiveRooms" class="chat-tabs" role="tablist"></ul>
+            <span class="glyphicon glyphicon-plus add-room" id="JoinRoomBtn"></span>
+
+            <div id="Motd" class="motd hidden">
+                <span class="text-info">Message of the day: </span>
+                <p></p>
+            </div>
+
+            <div class="content-sections-body chat-body-users chat-users">
+                <p>Online in Room</p>
+                <ul id="ChatRoomUsers"></ul>
+            </div>
+
+            <div id="ChatBody" class="content-sections-body chat-body-min">
+                <div id="RoomTabs" class="tab-content"></div>
+            </div>
+            <div class="input-row">
+                <input type="text" id="textInput" placeholder="Type a message..." class="chat-input-min" />
+                <div id="sendBtn" class="btn btn-primary">Send</div>
+            </div>
+        </div>
+    </div>
+}
+else
+{
+    <div class="content-sections">
+        <div id="ChatBox" class="content-sections-body">
+            @Html.Raw(audioMuteSpan)
+            <ul id="ActiveRooms" class="chat-tabs" role="tablist"></ul>
+            <span class="glyphicon glyphicon-plus add-room" id="JoinRoomBtn"></span>
+            <div id="Motd" class="motd hidden">
+                <span class="text-info">Message of the day: </span>
+                <p></p>
+            </div>
+            <div id="ChatBody" class="chat-body">
+                <div id="RoomTabs" class="tab-content"></div>
+            </div>
+            <div class="input-row">
+                <input type="text" id="textInput" placeholder="Type a message..." class="chat-input" />
+                <div id="sendBtn" class="btn btn-primary">Send</div>
+            </div>
+
+            <div class="content-sections">
+                <div class="content-sections-heading">Active Room Users</div>
+                <div class="content-sections-body">
+                    <div class="chat-users">
+                        <ul id="ChatRoomUsers"></ul>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-sections">
+                <div class="content-sections-heading">All Online Users</div>
+                <div class="content-sections-body">
+                    <div class="chat-users">
+                        <ul id="userList"></ul>
+                        <div style="clear: both;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@Html.Partial("_RoomModal")

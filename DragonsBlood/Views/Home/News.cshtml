@@ -1,0 +1,25 @@
+﻿@model List<DragonsBlood.Models.Announcements.Announcement>
+@{
+    ViewBag.Title = "Announcements";
+}
+
+
+<div class="content-sections">
+
+    <h3>News</h3>
+    <hr />
+
+    @foreach (var annoucement in Model)
+    {
+        <div class="panel panel-themed">
+            <div class="panel-heading">
+                <h5>@annoucement.Stamp</h5>
+                <h4>@annoucement.Subject</h4>
+            </div>
+            <div class="panel-body">
+                @Html.Raw(HttpContext.Current.Server.HtmlDecode(annoucement.Body))
+            </div>
+        </div>
+    }
+</div>
+

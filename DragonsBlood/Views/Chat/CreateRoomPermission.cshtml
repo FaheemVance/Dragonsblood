@@ -1,0 +1,42 @@
+﻿@model DragonsBlood.Models.ChatModels.ChatRoomPermissionModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+
+    <div class="content-sections">
+        <div class="content-sections-heading">Add Permission To Room</div>
+        <div class="content-sections-body">
+            <div class="form-horizontal">
+                <div class="form-group">
+                    @Html.DropDownListFor(model => model.SelectedRoom, new List<SelectListItem>(Model.Rooms.Select(r => new SelectListItem() {Text = r, Value = r})), new { @class = "form-control dropdown"})
+                </div>
+
+                <div class="form-group">
+                    @Html.DropDownListFor(model => model.SelectedPermission, new List<SelectListItem>(Model.Permissions.Select(r => new SelectListItem() {Text = r, Value = r})), new { @class = "form-control" })
+                </div>
+
+                <div class="form-group">
+                    @Html.HiddenFor(model => model.SelectedRoom)
+                    @Html.HiddenFor(model => model.SelectedPermission)
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <input type="submit" value="Create" class="btn btn-default"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-sections-footer">
+            <div>
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        </div>
+    </div>   
+}

@@ -1,0 +1,10 @@
+﻿@using DragonsBlood.Data.Extensions
+@if (!string.IsNullOrEmpty(User.Identity.Name) && User.IsRestricted())
+{
+    <div class="container container-custom alert alert-custom">
+        <ul>
+            <li>Your account is currently restricted. Please contact DodgyMaster for approval.</li>
+        </ul>
+    </div>
+}
+@Html.ValidationSummary(true, "", new { @class = "container container-custom alert alert-custom" })

@@ -1,0 +1,27 @@
+﻿<div id="FeedbackModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        @using (@Ajax.BeginForm("SubmitFeedback", "Feedback", new AjaxOptions() { HttpMethod = "Post", OnSuccess = "onFeedbackSuccess" }))
+            {
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="glyphicon glyphicon-remove-circle nest-right glyphicon-button" data-dismiss="modal" aria-label="Close" aria-hidden="true"></span>
+                    <h4 class="modal-title">Submit Feedback</h4>
+                </div>
+                <div id="feedbackModalBody" class="modal-body">
+                    <p>
+                        Please us the box below to send us your feedback, we appreciate any comments you have regarding this website.
+                        If you like, do not like, or simply want to see a new feature let us know.
+                    </p>
+
+                    <textarea name="feedback" id="feedback" class="form-control"></textarea>
+                </div>
+                <div class="modal-footer">
+                    <div id="feedbackModalFooter">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Send Feedback</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

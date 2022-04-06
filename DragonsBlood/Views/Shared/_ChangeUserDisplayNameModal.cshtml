@@ -1,0 +1,32 @@
+﻿<div id="UpdateDisplayNameModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        @using (Html.BeginForm("ChangeDisplayName", "Members", new { ReturnUrl = ViewBag.ReturnUrl}, FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
+        {
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="glyphicon glyphicon-remove-circle nest-right glyphicon-button" data-dismiss="modal" aria-label="Close" aria-hidden="true"></span>
+                    <h4 class="modal-title">Update Display Name</h4>
+                </div>
+                <div id="modalbody" class="modal-body">
+
+                    @Html.AntiForgeryToken()
+                    <div class="form-group">
+                        <input id="Id" name="id" type="hidden"/>
+                        
+                        <label>Current Display Name:</label><br />
+                        <input id="CurrentDisplayName" type="text" disabled="disabled" class="form-control"/><br /><br />
+
+                        <label>New Display Name:</label><br />
+                        <input id="Name" name ="name" type="text" class="form-control"/>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <div id="modalfooter">
+                        <button type="submit" class="btn btn-primary">Change</button>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+

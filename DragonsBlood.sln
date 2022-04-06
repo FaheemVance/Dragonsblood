@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonsBlood", "DragonsBlood\DragonsBlood.csproj", "{74E70757-FE79-4387-A756-2ADD91866F31}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonsBlood.Business", "DragonsBlood.Business\DragonsBlood.Business.csproj", "{506E5E49-1933-456D-B59A-E412DD0242A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonsBlood.Data", "DragonsBlood.Data\DragonsBlood.Data.csproj", "{FF532AEA-5C3F-4C85-8515-307AC8649338}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonsBlood.Models", "DragonsBlood.Models\DragonsBlood.Models.csproj", "{D5A362C9-A641-4F6C-80BF-A08BEF5FB826}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DragonsBlood.Chat", "DragonsBlood.Chat\DragonsBlood.Chat.csproj", "{FF017059-4AA9-4BA2-BA7C-5A94E0DA83FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		LiveTestingRelease|Any CPU = LiveTestingRelease|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{74E70757-FE79-4387-A756-2ADD91866F31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74E70757-FE79-4387-A756-2ADD91866F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74E70757-FE79-4387-A756-2ADD91866F31}.LiveTestingRelease|Any CPU.ActiveCfg = LiveTestingRelease|Any CPU
+		{74E70757-FE79-4387-A756-2ADD91866F31}.LiveTestingRelease|Any CPU.Build.0 = LiveTestingRelease|Any CPU
+		{74E70757-FE79-4387-A756-2ADD91866F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74E70757-FE79-4387-A756-2ADD91866F31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{506E5E49-1933-456D-B59A-E412DD0242A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{506E5E49-1933-456D-B59A-E412DD0242A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{506E5E49-1933-456D-B59A-E412DD0242A8}.LiveTestingRelease|Any CPU.ActiveCfg = LiveTestingRelease|Any CPU
+		{506E5E49-1933-456D-B59A-E412DD0242A8}.LiveTestingRelease|Any CPU.Build.0 = LiveTestingRelease|Any CPU
+		{506E5E49-1933-456D-B59A-E412DD0242A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{506E5E49-1933-456D-B59A-E412DD0242A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF532AEA-5C3F-4C85-8515-307AC8649338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF532AEA-5C3F-4C85-8515-307AC8649338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF532AEA-5C3F-4C85-8515-307AC8649338}.LiveTestingRelease|Any CPU.ActiveCfg = LiveTestingRelease|Any CPU
+		{FF532AEA-5C3F-4C85-8515-307AC8649338}.LiveTestingRelease|Any CPU.Build.0 = LiveTestingRelease|Any CPU
+		{FF532AEA-5C3F-4C85-8515-307AC8649338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF532AEA-5C3F-4C85-8515-307AC8649338}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D5A362C9-A641-4F6C-80BF-A08BEF5FB826}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D5A362C9-A641-4F6C-80BF-A08BEF5FB826}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D5A362C9-A641-4F6C-80BF-A08BEF5FB826}.LiveTestingRelease|Any CPU.ActiveCfg = LiveTestingRelease|Any CPU
+		{D5A362C9-A641-4F6C-80BF-A08BEF5FB826}.LiveTestingRelease|Any CPU.Build.0 = LiveTestingRelease|Any CPU
+		{D5A362C9-A641-4F6C-80BF-A08BEF5FB826}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D5A362C9-A641-4F6C-80BF-A08BEF5FB826}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF017059-4AA9-4BA2-BA7C-5A94E0DA83FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF017059-4AA9-4BA2-BA7C-5A94E0DA83FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF017059-4AA9-4BA2-BA7C-5A94E0DA83FE}.LiveTestingRelease|Any CPU.ActiveCfg = LiveTestingRelease|Any CPU
+		{FF017059-4AA9-4BA2-BA7C-5A94E0DA83FE}.LiveTestingRelease|Any CPU.Build.0 = LiveTestingRelease|Any CPU
+		{FF017059-4AA9-4BA2-BA7C-5A94E0DA83FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF017059-4AA9-4BA2-BA7C-5A94E0DA83FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,78 @@
+﻿@using DragonsBlood.Data.Extensions
+@using DragonsBlood.Models.CustomModels
+@model IEnumerable<DragonsBlood.Models.AlertModels.Alert>
+
+@{
+    ViewBag.Title = "Alerts";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content-sections">
+    <div class="content-sections-heading">Alerts</div>
+    <p>@Html.ActionLink("Create Alert", "CreateAlert")</p>
+    
+    <div class="content-sections-body">
+        <table class="table table-responsive">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Attacker)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Kingdom)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Coordinates)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TimeStamp)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Retaliated)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.CompletedBy)
+                </th>
+                <th>Actions</th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                string Class = item.Retaliated ? "class=retaliated" : string.Empty;
+
+                <tr @Class>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Attacker)
+                    </td>
+                    <td>
+                        @{ var kingdom = item.Kingdom.ToString().GetDesc<Kingdoms>(); }
+                        @kingdom
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Coordinates.X) : @Html.DisplayFor(modelItem => item.Coordinates.Y)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TimeStamp)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Retaliated)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.CompletedBy)
+                    </td>
+                    <td>
+                        @if (!item.Retaliated)
+                        {
+                            @Html.ActionLink("Mark Completed", "Attack", new {item.Id})
+                        }
+                        @if (User.DisplayName() == item.CompletedBy)
+                        {
+                            @Html.ActionLink("Re-Open", "ReOpen", new {item.Id})
+                        }
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+    </div>
+</div>

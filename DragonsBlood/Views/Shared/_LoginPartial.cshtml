@@ -1,0 +1,43 @@
+﻿@using DragonsBlood.Data.Extensions
+
+@if (Request.IsAuthenticated)
+{
+    <div class="content-sections">
+        <div class="content-sections-heading">Account</div>
+        <div class="content-sections-body">
+
+            @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "" }))
+            {
+                @Html.AntiForgeryToken()
+
+                <h5>Welcome @User.DisplayName()!</h5>
+                <ul>
+                    <li>
+                        @Html.ActionLink("View your Profile", "Index", "Manage", routeValues: null, htmlAttributes: new { title = "Manage" })
+                    </li>
+                    @if (User.IsInRole("Admin"))
+                    {
+                        <li>
+                            @Html.ActionLink("Go to Admin", "Index", "Announcements", new { Area = "" }, null)
+                        </li>
+                    }
+                    <br />
+                    <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+                </ul>
+            }
+        </div>
+    </div>   
+}
+else
+{
+    <div class="content-sections">
+        <div class="content-sections-heading">Account</div>
+        <div class="content-sections-body">
+            <ul>
+                <li>@Html.ActionLink("Register", "Register", "Account", routeValues: new { Area = "" }, htmlAttributes: new { id = "registerLink" })</li>
+                <li>@Html.ActionLink("Log in", "Login", "Account", routeValues: new { Area = "" }, htmlAttributes: new { id = "loginLink" })</li>
+            </ul>
+        </div>
+    </div>
+    
+}

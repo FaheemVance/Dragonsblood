@@ -1,0 +1,15 @@
+﻿@model IEnumerable<DragonsBlood.Models.Documents.Document>
+@if (User.Identity.IsAuthenticated && Model.Any())
+{
+    <div class="banner-section">
+        <h4>Resources</h4>
+        <div class="banner-content">
+            <ul>
+                @foreach (var doc in Model)
+                {
+                    <li><a target="_blank" href="@doc.Location">@doc.DisplayText</a></li>
+                }
+            </ul>
+        </div>
+    </div>
+}

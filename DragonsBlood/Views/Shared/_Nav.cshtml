@@ -1,0 +1,70 @@
+﻿@using DragonsBlood.Data.Extensions
+@using DragonsBlood.Models
+
+@using (Html.BeginForm("LogOff", "Account", new {Area = ""}, FormMethod.Post, new {id = "logoutForm", @class = ""}))
+{
+    @Html.AntiForgeryToken()
+    ;
+    <ul class="nav navbar-nav">
+        <li><a href="/"><div class="navbar-row-item mini-logo"></div></a></li>
+        <li><a href="@Url.Action("News", "Home")"><div class="navbar-row-item">News</div></a></li>
+        <li><a href="@Url.Action("Index", "Alliance")"><div class="navbar-row-item">Allies</div></a></li>
+        <li><a href="@Url.Action("Index", "Enemy")"><div class="navbar-row-item">Enemies</div></a></li>
+        @if (User.Identity.IsAuthenticated && !User.IsRestricted())
+        {
+            <li><a href="@Url.Action("Members", "Account")"><div class="navbar-row-item">Members</div></a></li>
+        }
+    </ul>
+
+    <ul class="nav navbar-nav navbar-right">
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <li id="LoginNavItem" data-toggle="modal" data-target="#LoginModal"><div class="navbar-row-item">Log in</div></li>
+            <li><a href="@Url.Action("Register", "Account")"><div class="navbar-row-item">Register</div></a></li>
+        }
+        else
+        {
+            if (!User.IsRestricted())
+            {
+                <li>
+                    @{
+                        var alerts = (Session["Alerts"] as ResourcesModel).AlertCount;
+                        string active = string.Empty;
+                        if (alerts > 0)
+                        {
+                            active = "active";
+                        }
+                    }
+                    <a href="@Url.Action("Alerts", "Home")">
+                        <div id="AlertNav" class="navbar-row-item navbar-row-item-glyph">
+                            <span style="font-size: 18px;" class="glyphicon glyphicon-globe @active"></span>
+                            @if (alerts > 0)
+                            {
+                                <span class="badge @active">@alerts</span>
+                            }
+                        </div>
+                    </a>
+                </li>
+                <li id="FeedbackNavItem" data-toggle="modal" data-target="#FeedbackModal">
+                    <div class="navbar-row-item navbar-row-item-glyph">
+                        <span class="glyphicon glyphicon-bullhorn" style="font-size: 18px;"></span></div></li>
+            }
+            <li>
+                <div class="navbar-row-item-menu dropdown">
+                    <div class="dropdown-toggle" data-toggle="dropdown">@User.DisplayName() <span class="caret"></span></div>
+                    <ul class="dropdown-menu" role="menu">
+                        <li role="menuitem">
+                            <a href="@Url.Action("Index", "Manage")">Profile</a>
+                        </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li><a href="@Url.Action("Index", "Announcements")">Admin</a></li>
+                        }
+                        <li><a Id="logOffButton" href="javascript:document.getElementById('logoutForm').submit()">
+                            <div class="menu-item">Log off</div></a></li>
+                    </ul>
+                </div>
+            </li>
+        }
+    </ul>
+}

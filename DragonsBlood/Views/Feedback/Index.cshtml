@@ -1,0 +1,42 @@
+﻿@model IEnumerable<DragonsBlood.Data.Feedback.FeedbackItem>
+
+@{
+    ViewBag.Title = "Feedback";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-sections">
+    <div class="content-sections-heading">Feedback</div>
+    <div class="content-sections-body">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Creator)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Comment)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TimeStamp)
+                </th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Creator)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Comment)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.TimeStamp)
+                    </td>
+                </tr>
+            }
+
+        </table>
+
+    </div>
+</div>

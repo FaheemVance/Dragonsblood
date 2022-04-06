@@ -1,0 +1,45 @@
+﻿@model IEnumerable<DragonsBlood.Models.Documents.Document>
+
+@{
+    ViewBag.Title = "Documents";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-sections">
+    <div class="content-sections-heading">Documents</div>
+    <div class="content-sections-body">
+        <p>
+            @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-default" })
+        </p>
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.DisplayText)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Location)
+                </th>
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.DisplayText)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Location)
+                    </td>
+                    <td class="btn-group">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "btn btn-default" })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-default" })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+</div>
+
+

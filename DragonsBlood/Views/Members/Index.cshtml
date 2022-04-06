@@ -1,0 +1,54 @@
+﻿@using DragonsBlood.Data.Extensions
+@model IEnumerable<DragonsBlood.Models.Users.ApplicationUser>
+
+@{
+    ViewBag.Title = "Members";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-sections">
+    <div class="content-sections-heading">Member Management</div>
+    <div class="content-sections-body">
+        <ul class="member-list">
+            @Html.ValidationSummary(true, "", new {@class = "text-danger"})
+            @foreach (var user in Model)
+            {
+                <li>
+                    <div class="btn-group">
+                        <div class="btn btn-primary member-name">@user.DisplayName</div>
+                        @if (!user.IsRestricted())
+                        {
+                            @Html.ActionLink("Restrict", "RestrictMember", "Members", new {Area = "", Id = user.Id}, new {@class = "btn btn-default"})
+                            
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Make Member", "UnRestrictMember", "Members", new {Area = "", Id = user.Id}, new {@class = "btn btn-default"})
+                            
+                        }
+
+                        @if (user.IsChatUser())
+                        {
+                            @Html.ActionLink("Remove Chat", "RestrictChat", "Members", new {Area = "", Id = user.Id}, new {@class = "btn btn-default"})
+                           
+                        }
+                        else
+                        {
+                            @Html.ActionLink("Add Chat", "AddChat", "Members", new {Area = "", Id = user.Id}, new {@class = "btn btn-default"})
+                            
+                        }
+                        @if (!user.IsInRole("Admin"))
+                        {
+                            @Html.ActionLink("Delete User", "DeleteUser", "Members", new { Area = "", Id = user.Id }, new { @class = "btn btn-default" })
+                        }
+                        
+                        <div class="btn btn-default" id="UpdateDisplayNameButton" data-toggle="modal" data-target="#UpdateDisplayNameModal" data-id="@user.Id" data-current="@user.DisplayName">Update Display Name</div>
+                        <div class="btn btn-default" data-button="AddToGroup">Add to Group...</div>
+                    </div>
+                </li>
+            }
+        </ul>
+    </div>
+</div>
+@Html.Partial("_AddUserToGroupModal")
+@Html.Partial("_ChangeUserDisplayNameModal")

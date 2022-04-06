@@ -1,0 +1,34 @@
+﻿@model DragonsBlood.Models.IndexViewModel
+@{
+    ViewBag.Title = "Manage";
+}
+
+<div class="content-sections">
+    <div class="content-sections-heading">Manage your profile</div>
+    <div class="content-sections-body">
+        <dl class="dl-horizontal">
+            <dt>Password:</dt>
+            <dd>
+                [
+                @if (Model.HasPassword)
+                {
+                    @Html.ActionLink("Change your password", "ChangePassword")
+                }
+                else
+                {
+                    @Html.ActionLink("Create", "SetPassword")
+                }
+                ]
+            </dd>
+            <dt>Display Name:</dt>
+            <dd>[ @Html.ActionLink("Change your display name", "ChangeDisplayName") ]</dd>
+
+            <dt>Settings:</dt>
+            <dd>[ @Html.ActionLink("Change your settings", "ChangeSettings") ]</dd>
+            
+            
+            <dt>LoH Player Level:</dt>
+            <dd> [@Ajax.ActionLink("+", "IncrementPlayerLevel", new AjaxOptions { HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "playerLevel" })] <span id="playerLevel">@Model.PlayerLevel</span> [@Ajax.ActionLink("-", "DecrementPlayerLevel", new AjaxOptions { HttpMethod = "POST", InsertionMode = InsertionMode.Replace, UpdateTargetId = "playerLevel" })] </dd>
+        </dl>
+    </div>
+</div>

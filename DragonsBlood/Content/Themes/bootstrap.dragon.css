@@ -1,0 +1,1653 @@
+.modal-dropdown
+{
+    background-color: rgba(220,30,30,0.7);
+    border: 1px solid red;
+    color: white;
+    font-weight: normal;
+    border-radius: 5px;
+    width: 40%;
+    height: 35px;
+    padding: 6px;
+    margin-bottom: 10px;
+}
+
+    .modal-dropdown:hover
+    {
+        background-color: rgba(160,30,30,0.7);
+    }
+
+@media(max-width: 300px)
+{
+    body
+    {
+        background: url('../../Images/Bg2-mini.jpg-') no-repeat top left;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .page-sidebar-right .content-sections
+    {
+        float: left;
+        width: 100%;
+    }
+
+    .entry
+    {
+        height: 100px;
+        transition: height ease-in-out 0.5s;
+    }
+}
+
+@media(max-width: 500px)
+{
+    body
+    {
+        background: url('../../Images/Bg2-mini.jpg') no-repeat top left;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .page-sidebar-right .content-sections
+    {
+        float: left;
+        width: 45%;
+    }
+
+    .entry
+    {
+        height: 150px;
+        transition: height ease-in-out 0.5s;
+    }
+
+    .banner-section
+    {
+        visibility: hidden;
+    }
+
+    .buttons
+    {
+        visibility: hidden;
+    }
+
+    div > .modal-dropdown
+    {
+        width: 100%;
+    }
+}
+
+@media(max-width: 768px)
+{
+    body
+    {
+        background: url('../../Images/Bg2-min.jpg') no-repeat top left;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .page-main
+    {
+        width: 100%;
+    }
+
+    .entry
+    {
+        height: 250px;
+        transition: height ease-in-out 0.5s;
+    }
+
+    .banner-section > h4
+    {
+        font-size: 14px;
+    }
+
+    .page-sidebar-right
+    {
+        float: none;
+        clear: both;
+        width: 100%;
+    }
+
+        .page-sidebar-right .content-sections
+        {
+            float: left;
+            width: 33%;
+            margin-right: 15px;
+        }
+
+    .navbar-row-item-menu
+    {
+        border-right: 1px solid #222;
+        min-width: 80px;
+        text-align: center;
+        padding: 15px;
+        color: gray;
+        transition: border ease-in-out 0.1s;
+        cursor: pointer;
+    }
+
+        .navbar-row-item-menu:hover
+        {
+            color: gold;
+        }
+
+        .navbar-row-item-menu > .dropdown-menu
+        {
+            background-color: #c80000;
+            background-color: rgba(200,0,0,0.9);
+            border: 1px solid red;
+        }
+        .navbar-row-item-menu > .dropdown-toggle
+        {
+            border-bottom: 1px solid #333;
+            padding: 5px;
+        }
+
+            .navbar-row-item-menu > .dropdown-menu > li
+            {
+                border-bottom: 1px solid #333;
+                padding: 5px;
+            }
+
+            .navbar-row-item-menu > .dropdown-menu > li > a
+            {
+                text-align: center;
+                color: white;
+            }
+
+                .navbar-row-item-menu > .dropdown-menu > li > a:hover
+                {
+                    background-color: #ffffff;
+                    background-color: rgba(0,0,0,0.4);
+                    color: gold;
+                }
+
+    .navbar-navrow-collapse-button
+    {
+        visibility: visible;
+    }
+
+    .navbar-navrow-collapse-button
+    {
+        border-radius: 5px;
+        background: linear-gradient(to bottom, rgba(34,34,34,1) 0,rgba(85,85,85,1) 49%,rgba(34,34,34,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+        border: 1px solid #222;
+        z-index: 1000;
+    }
+
+        .navbar-navrow-collapse-button:hover
+        {
+            border-radius: 5px;
+            color: black;
+            background: linear-gradient(to bottom, rgba(65,65,65,1) 0,rgba(185,185,185,1) 49%,rgba(65,65,65,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+            border: 1px solid #222;
+        }
+
+    .navbar-navrow-collapse
+    {
+        max-width: 90%;
+        position: relative;
+        background-color: #ffffff;
+        background-color: rgba(255,255,255,0.6);
+        padding: 10px;
+        border-radius: 10px;
+        z-index: 999;
+    }
+
+        .navbar-navrow-collapse ul
+        {
+            list-style: none;
+            background-color: #000000;
+            background-color: rgba(0,0,0,0.9);
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+    .navbar-row-item
+    {
+        width: 100%;
+        padding: 10px;
+        border-bottom: 1px solid #333;
+        margin-bottom: 10px;
+        text-align: center;
+        color: gray;
+        transition: border ease-in-out 0.4s;
+        cursor: pointer;
+    }
+
+        .navbar-row-item:hover
+        {
+            border-left: 8px solid red;
+            border-right: 8px solid red;
+            background-color: #1c1c1c;
+            background-color: rgba(28,28,28,0.6);
+            transition: border ease-in-out 0.15s;
+        }
+
+    .navbar-navrow-btn
+    {
+        min-width: 100%;
+        border: 0;
+        float: none;
+    }
+
+        .navbar-navrow-btn:hover
+        {
+            border: 0;
+        }
+
+    .mobile-only
+    {
+        visibility: visible;
+    }
+
+    .buttons > a > .btn
+    {
+        padding-top: 15px;
+        font-size: 11px;
+        transition: font-size ease-in-out 0.5s;
+    }
+
+    .modal-dropdown
+    {
+        width: 50%;
+    }
+}
+
+@media(min-width: 769px)
+{
+    body
+    {
+        background: url('../../Images/Bg2-min.jpg') no-repeat top left;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .banner-section > h4
+    {
+        font-size: 14px;
+    }
+
+    .banner-section > a > h4
+    {
+        font-size: 14px;
+    }
+
+    .page-sidebar-right
+    {
+        width: 28%;
+        float: right;
+    }
+
+    .navbar-toggle
+    {
+        display: none;
+    }
+
+    .navbar-navrow > .collapse
+    {
+        visibility: visible;
+        display: block;
+    }
+
+    .navbar-navrow-collapse ul
+    {
+        list-style: none;
+        height: 50px;
+        margin: 0;
+        padding: 0;
+    }
+
+        .navbar-navrow-collapse ul li
+        {
+            float: left;
+        }
+
+    .navbar-row-item-menu
+    {
+        border-right: 1px solid #222;
+        min-width: 80px;
+        text-align: center;
+        padding: 15px;
+        color: gray;
+        transition: border ease-in-out 0.1s;
+        cursor: pointer;
+    }
+
+        .navbar-row-item-menu:hover
+        {
+            color: gold;
+        }
+
+        .navbar-row-item-menu > .dropdown-menu
+        {
+            background-color: #c80000;
+            background-color: rgba(200,0,0,0.9);
+            border: 1px solid red;
+        }
+
+            .navbar-row-item-menu > .dropdown-menu > li > a
+            {
+                color: white;
+            }
+
+                .navbar-row-item-menu > .dropdown-menu > li > a:hover
+                {
+                    background-color: #ffffff;
+                    background-color: rgba(0,0,0,0.4);
+                    color: gold;
+                }
+
+    .navbar-row-item
+    {
+        border-right: 1px solid #222;
+        min-width: 80px;
+        text-align: center;
+        padding: 15px;
+        cursor: pointer;
+        color: gray;
+        transition: border ease-in-out 0.1s;
+    }
+
+        .navbar-row-item:hover
+        {
+            border-top: 2px solid red;
+            height: 45px;
+            color: gold;
+            transition: border-top ease-in-out 0.1s;
+        }
+
+        .navbar-row-item.dropdown:hover
+        {
+            border: 0;
+            cursor: pointer;
+            color: gold;
+        }
+
+    .navbar-row-item-right
+    {
+        position: relative;
+        left: 50px;
+        text-align: center;
+    }
+}
+
+@media(max-width: 1000px)
+{
+    body
+    {
+        background: url('../../Images/Bg2.jpg') no-repeat top left;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .entry
+    {
+        height: 300px;
+        transition: height ease-in-out 0.5s;
+    }
+
+    .buttons > a > .btn
+    {
+        padding-top: 15px;
+        transition: font-size ease-in-out 0.5s;
+    }
+
+    .banner-section > h4
+    {
+        font-size: 15px;
+    }
+
+    .banner-section > a > h4
+    {
+        font-size: 15px;
+    }
+}
+
+@media(min-width: 1300px)
+{
+    body
+    {
+        background: url('../../Images/Bg2.jpg') no-repeat top left;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+
+    .entry
+    {
+        height: 450px;
+        transition: height ease-in-out 0.5s;
+    }
+
+    .banner-section > h4
+    {
+        font-size: 18px;
+    }
+
+    .banner-section > a > h4
+    {
+        font-size: 18px;
+    }
+
+    .buttons > a > .btn
+    {
+        padding-top: 25px;
+        font-size: 18px;
+        transition: font-size ease-in-out 0.5s;
+    }
+}
+
+/* Custom Sections */
+
+footer > p
+{
+    text-align: center;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.container
+{
+    width: 100%;
+    padding: 0;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: #ff3c3c;
+    background-color: rgba(255,60,60, 0.4);
+    border-radius: 0;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.container-custom
+{
+    background-color: #963c3c;
+    background-color: rgba(150,60,60,0.95);
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.page-content
+{
+    color: white;
+    background-color: #000000;
+    background-color: rgba(0,0,0,0.6);
+    padding: 10px;
+    border-radius: 0;
+    border: 1px solid #111;
+}
+
+.mini-logo
+{
+    background-image: url('../../Images/minilogo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: auto;
+    height: 40px;
+}
+
+.entry
+{
+    background-image: url('../../Images/entry.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 350px;
+    transition: height ease-in-out 0.5s;
+}
+
+.alert
+{
+    margin: 0;
+    color: white;
+}
+
+.alert-custom
+{
+    color: white;
+}
+
+.sidebar
+{
+    margin-right: 20px;
+}
+
+.navbar-inverse
+{
+    border-radius: 0;
+    border: 1px solid #111;
+    border-bottom: 1px solid gray;
+    margin-top: 0;
+    margin-bottom: 20px;
+    z-index: 1000;
+}
+
+.nav > li > a
+{
+    padding: 0;
+}
+
+.navbar-logo
+{
+    margin: auto;
+    position: relative;
+    top: 120px;
+    text-align: center;
+}
+
+.navbar-navrow
+{
+    background-color: #2d2d2d;
+    background-color: rgba(45,45,45,0.1);
+}
+
+.navbar-header
+{
+    background-color: #2d2d2d;
+    background-color: rgba(45,45,45,0.9);
+}
+
+.navbar-navrow-btn
+{
+    float: left;
+    border-right: 1px solid #222;
+    min-width: 80px;
+    text-align: center;
+    padding: 15px;
+    padding-top: 10px;
+    background: transparent;
+    transition: background ease-in-out 0.3s;
+    z-index: 999;
+}
+
+    .navbar-navrow-btn:hover
+    {
+        border-top: 4px solid #f00;
+        border-radius: 0;
+        transition: background ease-in-out 0.6s;
+    }
+
+.navbar-navrow a
+{
+    text-decoration: none;
+    color: white;
+}
+
+    .navbar-navrow a:hover a:focus
+    {
+        text-decoration: none;
+        color: white;
+    }
+
+
+.navbar-toggle
+{
+    position: relative;
+    float: right;
+    padding: 9px 10px;
+    margin-top: 8px;
+    margin-right: 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+    .navbar-toggle .icon-bar
+    {
+        display: block;
+        width: 22px;
+        height: 2px;
+        border-radius: 1px;
+    }
+
+        .navbar-toggle .icon-bar + .icon-bar
+        {
+            margin-top: 4px;
+        }
+
+.img-responsive
+{
+    border: 1px solid darkred;
+}
+
+.nest-right
+{
+    float: right;
+    font-size: 18px;
+}
+
+#minimiseChat
+{
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid gray;
+    padding: 5px;
+}
+
+.page-content
+{
+    border: 1px solid darkred;
+}
+
+.content-sections
+{
+    background-color: #141414;
+    background-color: rgba(20,20,20,0.8);
+    color: white;
+    border: 1px solid #555;
+    margin-bottom: 15px;
+    padding: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+    .content-sections > .content-sections-heading
+    {
+        color: white;
+        font-size: 24px;
+        padding: 15px;
+        padding-left: 5px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid white;
+        margin-bottom: 10px;
+    }
+
+    .content-sections > .content-sections-body
+    {
+        color: white;
+        font-size: 14px;
+        padding-bottom: 10px;
+    }
+
+    .content-sections > .content-sections-footer
+    {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        color: white;
+        font-size: 14px;
+        border-top: 1px solid white;
+        width: 100%;
+    }
+
+    .content-sections > .content-sections-body .link
+    {
+        text-align: right;
+    }
+
+.content-sections-body ul
+{
+    list-style: circle;
+    padding-left: 40px;
+}
+
+.content-sections a
+{
+    color: gold;
+}
+
+    .content-sections a:hover
+    {
+        text-decoration: none;
+    }
+
+.content-sections .btn-default
+{
+    color: black;
+}
+
+.btn.btn-primary.member-name
+{
+    min-width: 200px;
+}
+
+.btn.btn-primary.member-name:hover {
+    border: 1px solid red;
+    border-right: 5px solid yellow;
+}
+
+.content-sections-body > .member-list
+{
+    list-style: none;
+    padding: 0;
+}
+
+    .content-sections-body > .member-list > li
+    {
+        margin-bottom: 10px;
+    }
+
+.announce-entry
+{
+    border: 1px solid #555;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+.panel-heading h5
+{
+    font-size: 12px;
+    float: right;
+}
+
+.announce-entry h4
+{
+    font-weight: bold;
+    color: white;
+    padding-bottom: 5px;
+    border-bottom: 1px solid white;
+}
+
+.content-sections .panel .panel-heading
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.content-sections form
+{
+    padding: 10px;
+    margin: auto;
+    width: 80%;
+}
+
+div > input[type=checkbox]
+{
+    width: 34px;
+}
+
+.link-host > a
+{
+    margin-left: 15px;
+}
+
+.table-themed
+{
+    font-size: 14px;
+    max-width: 400px;
+    margin: 0;
+}
+
+.page-main-admin
+{
+    width: 100%;
+}
+
+.mobile-only
+{
+    visibility: visible;
+}
+
+.btn-primary
+{
+    background-color: rgba(220,20,20,0.8);
+    border-color: red;
+    color: white;
+}
+
+    .btn-primary:hover,
+    .btn-primary:focus
+    {
+        background-color: rgba(220, 20, 20, 0.8);
+        border-color: gold;
+        cursor: pointer;
+    }
+
+    .btn-primary:active,
+    .btn.btn-primary:active
+    {
+        background-color: rgba(160, 20, 20, 0.8);
+        border-color: gold;
+        cursor: pointer;
+    }
+
+.buttons
+{
+    padding: 10px;
+    width: 18%;
+    position: relative;
+    text-align: center;
+    min-width: 125px;
+    height: 100%;
+}
+
+    .buttons > a > .btn
+    {
+        margin-bottom: 5px;
+        display: block;
+        height: 18%;
+        width: 100%;
+        padding-top: 10px;
+        background-color: #c81414;
+        background-color: rgba(200, 20, 20, 0.9);
+        border: 1px solid red;
+        border-radius: 5px;
+        transition: font-size ease-in-out 0.5s;
+    }
+
+    .buttons > a
+    {
+        text-decoration: none;
+        color: white;
+    }
+
+.button > a:hover
+{
+    color: yellow;
+}
+
+.buttons > a > .btn:hover
+{
+    background-color: #e63232;
+    background-color: rgba(230, 50, 50, 0.9);
+    color: yellow;
+}
+
+.banner-section
+{
+    max-height: 50px;
+    float: right;
+    overflow: hidden;
+    background-color: #c81414;
+    background-color: rgba(200, 20, 20, 0.9);
+    border: 1px solid red;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin: 5px;
+    min-width: 160px;
+    max-width: 200px;
+    transition: 1s ease-in-out max-height;
+}
+
+.banner-section-container
+{
+    width: 250px;
+    float: right;
+}
+
+.banner-section > h4, .banner-section > a > h4
+{
+    text-align: center;
+    height: 40px;
+}
+
+.banner-section > a
+{
+    color: white;
+    text-align: center;
+}
+
+    .banner-section > a:hover
+    {
+        color: yellow;
+        text-decoration: none;
+    }
+
+.banner-content > ul
+{
+    list-style: square;
+    padding-left: 10px;
+}
+
+    .banner-content > ul > li > a
+    {
+        color: white;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+    }
+
+        .banner-content > ul > li > a:hover
+        {
+            color: yellow;
+            text-decoration: none;
+        }
+
+.banner-section:hover
+{
+    max-height: 300px;
+}
+
+.panel-themed
+{
+    color: white;
+    background-color: #783232;
+    background-color: rgba(120,50,50,0.6);
+}
+
+    .panel-themed > .panel-heading
+    {
+        color: yellow;
+        background-color: #b43232;
+        background-color: rgba(180,50,50,0.6);
+    }
+
+#picker.inactive
+{
+    visibility: hidden;
+    height: 1px;
+}
+
+.volume
+{
+    font-size: 16px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.glyphicon-volume-off
+{
+    color: red;
+}
+
+.glyphicon-volume-up
+{
+    color: green;
+}
+
+/************************************************************************************/
+/*                                  Animation Frames                                */
+/************************************************************************************/
+
+@keyframes newmessagefade
+{
+    from
+    {
+        background-color: lightpink;
+    }
+
+    to
+    {
+        background-color: #140000;
+        background-color: rgba(20,0,0,0.7);
+    }
+}
+
+/************************************************************************************/
+/*                                 Color Picker CSS                                 */
+/************************************************************************************/
+
+.farbtastic
+{
+    position: relative;
+}
+
+    .farbtastic *
+    {
+        position: absolute;
+        cursor: crosshair;
+    }
+
+    .farbtastic, .farbtastic .wheel
+    {
+        width: 195px;
+        height: 195px;
+    }
+
+        .farbtastic .color, .farbtastic .overlay
+        {
+            top: 47px;
+            left: 47px;
+            width: 101px;
+            height: 101px;
+        }
+
+        .farbtastic .wheel
+        {
+            background: url('../Images/ColorPicker/wheel.png') no-repeat;
+            width: 195px;
+            height: 195px;
+        }
+
+        .farbtastic .overlay
+        {
+            background: url('../Images/ColorPicker/mask.png') no-repeat;
+        }
+
+        .farbtastic .marker
+        {
+            width: 17px;
+            height: 17px;
+            margin: -8px 0 0 -8px;
+            overflow: hidden;
+            background: url('../Images/ColorPicker/marker.png') no-repeat;
+        }
+
+
+/************************************************************************************/
+/*                                      Alerts                                      */
+/************************************************************************************/
+
+#Alerts
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+    #Alerts > a
+    {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+        #Alerts > a:hover
+        {
+            text-decoration: none;
+            color: yellow;
+        }
+
+.badge.active
+{
+    color: yellow;
+    background-color: red;
+    margin-left: -10px;
+}
+
+.glyphicon-globe.active
+{
+    z-index: -1;
+    color: gold;
+}
+
+.Ice, .Dark, .High
+{
+    margin-bottom: 5px;
+    padding: 3px;
+    border-radius: 4px;
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+
+.Ice
+{
+    background-color: #008aba;
+    border: 1px solid #00bfff;
+    color: white;
+    background-color: rgba(0,150,200,0.7 );
+    background-image: url('../../Images/Ice.png');
+}
+
+.High
+{
+    background-color: #14c814;
+    background-color: rgba(20, 200, 20, 0.7);
+    border: 1px solid #00ff00;
+    color: white;
+    background-image: url('../../Images/High.png');
+}
+
+.Dark
+{
+    background-color: #ffdead;
+    background-color: rgba(255, 200, 140, 0.7);
+    color: black;
+    border: 1px solid gold;
+    background-image: url('../../Images/Dark.png');
+}
+
+.retaliated
+{
+    color: green;
+}
+
+.navbar-row-item-glyph
+{
+    min-width: 40px;
+    cursor: pointer;
+}
+
+/************************************************************************************/
+/*                                      Modals                                      */
+/************************************************************************************/
+
+.modal-content
+{
+    padding: 10px;
+    background-color: #c81414;
+    background-color: rgba(200, 20, 20, 0.8);
+    border: 1px solid red;
+    color: white;
+}
+
+.modal-body > p > a
+{
+    color: gold;
+}
+
+.modal-header
+{
+    padding: 5px;
+    color: white;
+}
+
+.modal-body
+{
+    padding: 10px;
+    clear: both;
+}
+
+    .modal-body .checkbox
+    {
+        padding: 0;
+        padding-left: 10px;
+    }
+
+.glyphicon-button
+{
+    cursor: pointer;
+}
+
+    .glyphicon-button:hover
+    {
+        color: gold;
+    }
+
+
+/************************************************************************************/
+/*                                        Chat                                      */
+/************************************************************************************/
+
+.chat-body
+{
+    width: 100%;
+    color: white;
+    background-color: #000000;
+    background-color: rgba(10,0,0,0.5);
+    max-height: 550px;
+    overflow-y: scroll;
+    border: 1px solid red;
+    border-radius: 5px;
+}
+
+    /* Let's get this party started */
+    .chat-body::-webkit-scrollbar, .chat-body-min::-webkit-scrollbar
+    {
+        width: 20px;
+    }
+
+    /* Track */
+    .chat-body::-webkit-scrollbar-track, .chat-body-min::-webkit-scrollbar-track
+    {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+        -webkit-border-radius: 10px;
+        border-radius: 5px;
+    }
+
+    /* Handle */
+    .chat-body::-webkit-scrollbar-thumb, .chat-body-min::-webkit-scrollbar-thumb
+    {
+        -webkit-border-radius: 5px;
+        border-radius: 5px;
+        border: 1px solid red;
+        background: rgba(250,30,30,0.8);
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    }
+
+.chat-users
+{
+    width: 100%;
+    border: 1px solid gray;
+    padding: 10px;
+    clear: both;
+}
+
+.chat-body-min
+{
+    width: 80%;
+    color: white;
+    background-color: #000000;
+    background-color: rgba(0,0,0,0.5);
+    max-height: 200px;
+    overflow-y: scroll;
+    border: 1px solid red;
+    border-radius: 5px;
+    clear: left;
+}
+
+.chat-body-users {
+    width: 19%;
+    max-height: 200px;
+    min-width: 150px;
+    background-color: rgba(40,0,0,0.8);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid red;
+    float: right;
+    margin-bottom: 10px;
+}
+
+@media(max-width: 850px) {
+
+    .chat-body-min {
+        width: 100%;
+        clear: both;
+        color: white;
+        background-color: #000000;
+        background-color: rgba(0,0,0,0.5);
+        max-height: 200px;
+        overflow-y: scroll;
+        border: 1px solid red;
+        border-radius: 5px;
+    }
+
+    .chat-body-users {
+        width: 100%;
+        clear: both;
+        max-height: 200px;
+        min-width: 150px;
+        background-color: rgba(40,0,0,0.8);
+        padding: 5px;
+        border-radius: 5px;
+        border: 1px solid red;
+        margin-bottom: 10px;
+    }
+}
+
+.chat-input
+{
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 90%;
+}
+
+.chat-input-min
+{
+    color: black;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 80%;
+    height: 30px;
+    border-radius: 3px;
+    border: 1px solid red;
+}
+
+.input-row
+{
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    background-color: rgba(40,0,0,0.8);
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid red;
+    clear: both;
+}
+
+    .input-row input
+    {
+        height: 34px;
+    }
+
+    .input-row .btn
+    {
+        float: right;
+    }
+
+    .input-row > .btn-default:hover
+    {
+        border: 1px solid darkred;
+        background: red;
+    }
+
+.chat-body ul
+{
+    list-style: none;
+    display: table;
+    padding: 0;
+    width: 100%;
+}
+
+    .chat-body ul > .new
+    {
+        animation-name: newmessagefade;
+        animation-duration: 4s;
+    }
+
+    .chat-body ul > li
+    {
+        list-style: none;
+        padding: 1px;
+        padding-left: 10px;
+    }
+
+        .chat-body ul > li:nth-of-type(n)
+        {
+            background-color: #140000;
+            background-color: rgba(20,0,0,0.3);
+        }
+
+        .chat-body ul > li:nth-of-type(2n+1)
+        {
+            background-color: #1e1e1e;
+            background-color: rgba(30, 30, 30, 0.7);
+        }
+
+        .chat-body ul > li:nth-of-type(n):hover
+        {
+            background-color: #000000;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .chat-body ul > li:nth-of-type(2n+1):hover
+        {
+            background-color: #000000;
+            background-color: rgba(0,0,0,0.8);
+        }
+
+        .chat-body ul > li > strong
+        {
+            color: yellow;
+        }
+
+.chat-body-min ul
+{
+    list-style: none;
+    display: table;
+    padding: 0;
+    width: 100%;
+}
+
+    .chat-body-min ul > li
+    {
+        list-style: none;
+        padding: 1px;
+        padding-left: 10px;
+    }
+
+    .chat-body-min ul > .new
+    {
+        animation-name: newmessagefade;
+        animation-duration: 4s;
+    }
+
+    .chat-body-min ul > li:nth-of-type(n)
+    {
+        background-color: #140000;
+        background-color: rgba(30,20,15,0.9);
+    }
+
+    .chat-body-min ul > li:nth-of-type(2n+1)
+    {
+        background-color: #1e1e1e;
+        background-color: rgba(25, 15, 10, 0.9);
+    }
+
+    .chat-body-min ul > li:nth-of-type(n):hover
+    {
+        background-color: #000000;
+        background-color: rgba(0,0,0,0.6);
+    }
+
+    .chat-body-min ul > li:nth-of-type(2n+1):hover
+    {
+        background-color: #000000;
+        background-color: rgba(0,0,0,0.6);
+    }
+
+    .chat-body-min ul > li > strong
+    {
+        color: yellow;
+    }
+
+#ChatContainer > ul
+{
+    margin-left: 45px;
+}
+
+.chat-users > ul
+{
+    list-style: none;
+    padding: 0;
+    clear: both;
+}
+
+    .chat-users > ul > li
+    {
+        float: left;
+        display: block;
+        background-color: rgba(30, 120, 30, 0.6);
+        border: 1px solid green;
+        padding: 5px;
+        cursor: default;
+        margin-right: 5px;
+        margin-bottom: 5px;
+    }
+
+.chat-tabs
+{
+    padding: 0;
+    margin: 0;
+}
+
+
+    .chat-tabs > li
+    {
+        float: left;
+        list-style: none;
+        background-color: rgba(160, 30, 30, 0.3);
+        margin-right: 7px;
+        border: 1px solid red;
+        margin-bottom: -1px;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 5px;
+    }
+
+        .chat-tabs > li:hover
+        {
+            background-color: rgba(160, 40, 40, 0.7);
+            color: gold;
+        }
+
+        .chat-tabs > li.active
+        {
+            background-color: rgba(220,30,30,0.7);
+            border-bottom: 0;
+        }
+
+        .chat-tabs > li > a
+        {
+            color: gray;
+            text-decoration: none;
+        }
+
+            .chat-tabs > li > a:hover
+            {
+                color: gold;
+                text-decoration: none;
+            }
+
+        .chat-tabs > li.active > a
+        {
+            color: gold;
+        }
+
+    .chat-tabs > li
+    {
+        text-decoration: none;
+        color: gray;
+    }
+
+        .chat-tabs > li > a > div
+        {
+            padding: 5px;
+            padding-top: 14px;
+        }
+
+
+.chat-tabs > .unread {
+    background-color: rgba(0,150,0,0.8);
+    color: white !important;
+    border-left: green 1px solid;
+    border-right: green 1px solid;
+    border-top: green 1px solid;
+}
+
+.chat-tabs > .unread > a {
+    color: white;
+}
+
+.chat-content
+{
+    border: 1px solid red;
+    padding: 10px;
+    background-color: rgba(200,40,40,0.8);
+}
+
+.motd {
+    background-color: rgba(40,0,0,0.8);
+    color: white;
+    width: 100%;
+    border: 1px solid red;
+    padding: 3px;
+    margin-bottom: 10px;
+    clear: both;
+    border-radius: 5px;
+}
+
+.motd span {
+    color: yellowgreen;
+}
+
+.motd p {
+    display: inline-block;
+}
+
+.tooltip
+{
+    position: relative;
+    display: inline-block;
+    opacity: 1;
+}
+
+    /* Tooltip text */
+    .tooltip .tooltiptext
+    {
+        visibility: hidden;
+        width: 100px;
+        font-size: 10px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+        font-size: 12px;
+        padding: 0; /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+    }
+
+    /* Show the tooltip text when you mouse over the tooltip container */
+    .tooltip:hover .tooltiptext
+    {
+        visibility: visible;
+    }
+
+.chat-body ul > li:hover [class=tooltiptext], .chat-body-min ul > li:hover [class=tooltiptext]
+{
+    visibility: visible;
+}
+
+#ChatBox .volume, #ChatContainer .volume
+{
+    position: relative;
+    top: 25px;
+}
+
+.add-room
+{
+    color: red;
+    font-size: 12px;
+    position: relative;
+    top: 5px;
+    left: 5px;
+    cursor: pointer;
+}
+
+#roomList, #permissionList, #roleList, #removeList
+{
+    background-color: rgba(160,30,30,0.9);
+    color: white;
+    padding: 5px;
+    border: 1px solid red;
+    width: 40%;
+    text-align: center;
+}
+
+    #roomList > li:hover, #permissionList > li:hover, #roleList > li:hover, #removeList > li:hover
+    {
+        background-color: rgba(220,30,30,0.8);
+        color: yellow;
+    }
+
+#CreateRoomName
+{
+    margin-bottom: 10px;
+}
+
+#ActiveRooms > li > span
+{
+    color: gold;
+    float: right;
+    right: -5px;
+    top: -5px;
+    display: block;
+    position: relative;
+}
+
+    #ActiveRooms > li > span.glyphicon-remove-circle
+    {
+        cursor: pointer;
+    }
+
+.nest-dropdown-caret
+{
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+input[type=text], input[type=password]
+{
+    background-color: #141414;
+    background-color: rgba(20, 20, 20, 0.5);
+    border: 1px solid rgba(100,60,60,1);
+    border-radius: 5px;
+    color: white;
+}
+
+.tabs-custom > li
+{
+    padding: 5px;
+}
+
+ul.default-tabs {
+    list-style: none;
+    clear: both;
+    height: 30px;
+}
+
+ul.default-tabs > li {
+    float: left;
+    margin-right: 5px;
+    padding: 5px;
+    border: 1px solid darkred;
+    background-color: rgba(120, 20, 20, 0.5);
+    text-decoration: none;
+}
+    ul.default-tabs > li.active
+    {
+        background-color: rgba(220, 30, 30, 0.8);
+        border: 1px solid red;
+        text-decoration: none;
+    }
+ul.default-tabs > li > a {
+    text-decoration: none;
+}
+
+.modal {
+    z-index: 4000;
+}

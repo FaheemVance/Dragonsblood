@@ -1,0 +1,52 @@
+﻿@using DragonsBlood.Data.Extensions
+<div id="RoomModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="glyphicon glyphicon-remove-circle nest-right glyphicon-button" data-dismiss="modal" aria-label="Close" aria-hidden="true"></span>
+                <h4 class="modal-title">Chat Rooms</h4>
+            </div>
+            <div id="modalbody" class="modal-body">
+                <ul id="ActiveRooms" class="chat-tabs tabs-custom" role="tablist">
+                    <li role="presentation" class="active"><a href="#joinroom" aria-controls="join" role="tab" data-toggle="tab">Join Room</a></li>
+                    @if (User.IsAdmin())
+                    {
+                        <li role="presentation"><a href="#createroom" aria-controls="create" role="tab" data-toggle="tab">Create Room</a></li>
+                    }
+                </ul>
+                <br style="clear: both;"/>
+                <div class="tab-content chat-content">
+                    <div role="tabpanel" class="tab-pane active" id="joinroom">
+                        <p>
+                            Select a room to join from the list below:
+                        </p>
+                        <div class="dropdown">
+                            <div class="dropdown-toggle modal-dropdown" data-toggle="dropdown"><label id="selectedRoom">Select a room...</label><span class="caret nest-right nest-dropdown-caret"></span></div>
+                            <ul class="dropdown-menu" role="menu" id="roomList"></ul>
+                        </div>
+                        <div id="JoinExistingRoom" class="btn btn-primary">Join</div>
+                    </div>
+                    @if (User.IsAdmin())
+                    {
+                        <div role="tabpanel" class="tab-pane" id="createroom">
+                            <p>Give the new room a name and assign a user group to it.</p>
+                            <input type="text" class="form-control" id="CreateRoomName"/>
+
+                            <div class="dropdown">
+                                <div class="dropdown-toggle modal-dropdown" data-toggle="dropdown"><label id="selectedPermission">Select a user group...</label><span class="caret nest-right nest-dropdown-caret"></span></div>
+                                <ul class="dropdown-menu" role="menu" id="permissionList"></ul>
+                            </div>
+
+                            <div id="CreateRoomButton" class="btn btn-primary">Create</div>
+                        </div>
+                    }
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div id="modalfooter">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

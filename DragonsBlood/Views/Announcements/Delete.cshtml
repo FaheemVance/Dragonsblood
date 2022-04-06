@@ -1,0 +1,61 @@
+﻿@model DragonsBlood.Models.Announcements.Announcement
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="content-sections">
+    <div class="content-sections-heading">Delete Announcement</div>
+    <div class="content-sections-body">
+        <h3>Are you sure you want to delete this?</h3>
+        <div>
+            <dl class="dl-horizontal">
+                <dt>
+                    @Html.DisplayNameFor(model => model.Subject)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Subject)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Body)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Body)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Stamp)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Type)
+                </dd>
+
+                <dt>
+                    @Html.DisplayNameFor(model => model.Type)
+                </dt>
+
+                <dd>
+                    @Html.DisplayFor(model => model.Stamp)
+                </dd>
+
+            </dl>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+                <div class="form-actions no-color btn-group">
+                    <input type="submit" value="Delete" class="btn btn-default" />
+                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-default" })
+                </div>
+            }
+        </div>
+
+    </div>
+</div>
+

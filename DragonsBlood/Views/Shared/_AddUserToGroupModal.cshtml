@@ -1,0 +1,59 @@
+﻿<div id="UserGroupModal" class="modal fade" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <span class="glyphicon glyphicon-remove-circle nest-right glyphicon-button" data-dismiss="modal" aria-label="Close" aria-hidden="true"></span>
+                <h4 class="modal-title">Add User To Group</h4>
+            </div>
+            <div id="UserGroupModalBody" class="modal-body">
+                <label class="hidden" id="userHidden"></label>
+                <ul id="RoleTabs" class="chat-tabs tabs-custom" role="tablist">
+                    <li role="presentation" class="active"><a href="#currentRoles" aria-controls="current" role="tab" data-toggle="tab">Current Roles</a></li>
+                    <li role="presentation"><a href="#addNewRole" aria-controls="addNew" role="tab" data-toggle="tab">Add New Role</a></li>
+                    <li role="presentation"><a href="#removeRole" aria-controls="remove" role="tab" data-toggle="tab">Remove Role</a></li>
+                </ul>
+                <br style="clear: both;"/>
+                <div class="tab-content chat-content">
+
+                    <!-- Current Roles Tab -->
+                    <div role="tabpanel" class="tab-pane active" id="currentRoles">
+                        <p>
+                            These are the user's current roles
+                        </p>
+                        <ul id="currentRolesDisplay">
+                            
+                        </ul>
+                    </div>
+
+                    <!-- Add New Role Tab -->
+                    <div role="tabpanel" class="tab-pane" id="addNewRole">
+                        <p>Choose a role to add to the current user</p>
+                        <div class="dropdown">
+                            <div class="dropdown-toggle modal-dropdown" data-toggle="dropdown"><label id="selectedRole">Select a role...</label><span class="caret nest-right nest-dropdown-caret"></span></div>
+                            <ul class="dropdown-menu" role="menu" id="roleList"></ul>
+                        </div>
+
+                        <div id="CreateRoleButton" class="btn btn-primary">Add Role</div>
+                    </div>
+
+                    <!-- Remove Role Tab -->
+                    <div role="tabpanel" class="tab-pane" id="removeRole">
+                        <p>Choose a role to add to the current user</p>
+                        <div class="dropdown">
+                            <div class="dropdown-toggle modal-dropdown" data-toggle="dropdown"><label id="selectedRoleToRemove">Select a role...</label><span class="caret nest-right nest-dropdown-caret"></span></div>
+                            <ul class="dropdown-menu" role="menu" id="removeList"></ul>
+                        </div>
+
+                        <div id="RemoveRoleButton" class="btn btn-primary">Remove Role</div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="modal-footer">
+                <div id="modalfooter">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

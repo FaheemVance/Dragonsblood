@@ -1,0 +1,69 @@
+﻿@model DragonsBlood.Models.PageModels.IndexModel
+
+@{
+    ViewBag.Title = "Home";
+}
+
+<div class="entry">
+    <div class="banner-section-container">
+        @Html.Partial("_BannerAlerts", Model.Alerts)
+        @Html.Partial("_Docs", Model.Documents)
+    </div>
+    <div class="buttons">
+        <a href="#Announce">
+            <div class="btn">Announcements</div>
+        </a>
+        <a href="#About">
+            <div class="btn">About</div>
+        </a>
+    </div>
+    </div>
+
+</div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="page-content">
+        <div class="page-main">
+        <div id="Announce" name="Announce" class="content-sections">
+            <div class="content-sections-heading">Latest News</div>
+            <div class="content-sections-body">
+                @if (@Model.LatestAnnouncement != null)
+                {
+                    <div class="panel panel-themed">
+                        <div class="panel-heading">
+                            <h5>@Model.LatestAnnouncement.Stamp</h5>
+                            <h4>@Model.LatestAnnouncement.Subject</h4>
+                        </div>
+                        <div class="panel-body">
+                            @Html.Raw(HttpContext.Current.Server.HtmlDecode(Model.LatestAnnouncement.Body))
+                        </div>
+                    </div>
+                }
+                <div class="link">@Html.ActionLink("See More", "News")</div>
+            </div>
+        </div>
+        <div id="About" name="About" class="content-sections">
+            <div class="content-sections-heading">About The Dragon's Blood Alliance</div>
+            <div class="content-sections-body">
+                <p>
+                    Hi and welcome to “Dragons Blood Alliance”
+                </p>
+                <p>
+                    Within Dragons Blood, we encourage co-operation between all members and this website is a resource to be used to the benefit of all.
+                </p>
+                <p>
+                    The resources provided here are intended to complement and enhance the experience of playing LoH and gives us a means to share content, news, communicate across groups to all members of The Dragons Blood and our allies
+                    Together we can make “Dragons Blood” the best of the best within LoH, many others have tried and failed, “Now it’s our Turn, Let’s show them all how it is done”.
+                    <br/>
+                    - DodgyMaster
+                </p>
+                <p>
+                    The site and its content are managed and maintained by DodgyMaster at personal cost any donations to the domain registration, hosting and web development/maintenance which is performed by an external developer are appreciated.
+                    <br/>
+                    A Donation link will be provided in the near future.
+
+                </p>
+            </div>
+        </div>
